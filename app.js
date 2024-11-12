@@ -149,8 +149,40 @@
 
 // 5-masala 
 {
-    let numbers = [15, 25, 60]
-    let [a, b, c,] = numbers
+    // function decloration
+    function yigindi (...rest) {
+        let natija = 0;
+    for ( let i = 0; i < rest.length; i++) {
+        natija += rest[i]
+    }
+    return natija
+    }
 
-    console.log(a + b + c);
+    console.log(yigindi(10, 20, 30, 10));
+}
+
+{
+    // function expression
+    const yigindi = function (...rest) {
+        let natija = 0;
+    for ( let i = 0; i < rest.length; i++) {
+        natija += rest[i]
+    }
+    return natija
+    }
+
+    console.log(yigindi(10, 20, 30, 10));
+}
+
+{
+    // arrow function 
+    const yigindi = (...rest) => {
+        let natija = 0;
+    for ( let i = 0; i < rest.length; i++) {
+        natija += rest[i]
+    }
+    return natija
+    }
+
+    console.log(yigindi(10, 20, 30, 10));
 }
